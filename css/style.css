@@ -1,3 +1,14 @@
+/* CUSTOM PROPERTY */
+:root {
+    --text-color: #333;
+    --text-white-color: #fff;
+    --body-bgc: #fff;
+    --text-font-family: "Roboto", "Arial", sans-serif;
+    --global-orange-color: #F3D7B7;
+    --section-orange-color: #C99B67;
+}
+
+
 /* GLOBAL STYLES */
 html {
     height: 100%;
@@ -17,11 +28,11 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Arial", sans-serif;
+    font-family: var(--text-font-family);
     font-style: 16px;
-    line-height: 1.5;
-    background-color: #fff;
-    color: #222;
+    line-height: 1.75;
+    background-color: var(--body-bgc);
+    color: var(--text-color);
 }
 
 img {
