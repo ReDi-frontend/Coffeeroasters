@@ -5,6 +5,7 @@
     --black-text-color: #000;
     --body-bgc: #fff;
     --header-bgc: #f3d7b7;
+    --light-bgc: #f8f8f2;
     --text-font-family: "Roboto", "Arial", sans-serif;
     --accent-color: #0a775f;
     --accent-color-80: #0a775fcc;
@@ -172,8 +173,6 @@ ul {
 
 
 /* HERO */
-.hero {
-}
 .hero-container {
     display: flex;
     padding-left: 0;
@@ -218,9 +217,87 @@ ul {
 
 /* MAIN CONTENT */
 .main-content{
+    padding-top: 20px;
+    padding-bottom: 50px;
     flex-grow: 1;
 }
 
+
+/* INDEX COLLECTION */
+.index-collection {
+    margin-top: 0;
+}
+.index-collection-list-wrapper {
+    background-color: var(--light-bgc);
+    background-image: url(../img/index-collection-bg.jpg);
+    padding: 50px 143px;
+}
+.index-collection-title {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 80px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    color: var(--black-text-color);
+}
+.index-collection-list {
+    display: flex;
+    flex-direction: column;
+    width: 1114px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.index-collection-item {
+    display: flex;
+    align-items: center;
+}
+.index-collection-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.index-collection-img {
+    width: 450px;
+    height: 375px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.index-collection-content {
+    flex-grow: 1;
+    padding-left: 117px;
+    padding-right: 117px;
+}
+.index-collection-item-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 48px;
+    line-height: 56px;
+    color: var(--text-color);
+}
+.index-collection-text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+    color: var(--text-color);
+}
+.index-collection-text:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* .index-collection-item:nth-child(odd) .index-collection-content {
+    padding-left: 117px;
+}
+
+.index-collection-item:nth-child(even) .index-collection-content {
+    padding-right: 117px;
+} */
+
+
+/* //INDEX COLLECTION */
+/* //MAIN CONTENT */
 
 
 /* RETINA BG */
@@ -233,6 +310,9 @@ ul {
     only screen and (                min-resolution: 2dppx) {
         .site-header-hero-wrapper {
             background-image: url(../img/header-intro-bg@2x.jpg);
+        }
+        .index-collection-container {
+            background-image: url(../img/index-collection-bg@2x.jpg);
         }
 }
 /* //RETINA BG */
