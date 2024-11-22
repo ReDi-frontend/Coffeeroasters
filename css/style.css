@@ -76,6 +76,7 @@ ul {
     letter-spacing: 1px;
     border-radius: 100px;
     white-space: nowrap;
+    overflow-x: hidden;
 }
 
 .button-success {
@@ -206,10 +207,21 @@ ul {
     margin-bottom: 34px;
     color: var(--black-text-color);
 }
+.hero-img-wrapper {
+    position: relative;
+}
+.index-badge-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-25deg) translate(-50%, -50%);
+    transform-origin: top;
+}
 .hero-img {
     width: 710px;
     height: 596px;
     object-fit: cover;
+    display: block;
 }
 
 .index-hero-img {
@@ -236,7 +248,25 @@ ul {
     background-color: var(--light-bgc);
     background-image: url(../img/index-collection-bg.jpg);
     padding: 50px 143px;
+    position: relative;
 }
+.left-top-bgi {
+    position: absolute;
+    top: 0;
+    left: -258px;
+}
+.left-bottom-bgi {
+    position: absolute;
+    bottom: 170px;
+    left: -216px;
+    transform: rotate(7deg);
+}
+.right-center-bgi {
+    position: absolute;
+    bottom: 463px;
+    right: -329px;
+}
+
 .index-collection-title {
     text-transform: uppercase;
     margin-top: 0;
@@ -302,10 +332,16 @@ ul {
 .index-features-container {
 }
 .index-features-content {
+    position: relative;
     padding: 50px 30px;
     background-image: url(../img/index-features-bg.jpg);
     background-size: auto 703px;
     background-repeat: no-repeat;
+}
+.index-features-position-img {
+    position: absolute;
+    top: 263px;
+    left: -12px;
 }
 .index-features-title {
     margin-top: 0;
@@ -366,10 +402,23 @@ ul {
 
 /* HOW IT WORKS */
 .how-it-works-content {
+    position: relative;
     text-align: center;
     padding: 50px 30px;
     background-color: var(--accent-color);
     background-image: url(../img/how-it-works-bg.jpg);
+}
+.how-it-works-position-img {
+    position: absolute;
+    top: 41px;
+    right: 88px;
+    transform: rotate(5deg);
+}
+.how-it-works-position-line {
+    position: absolute;
+    top: 219px;
+    left: 85px;
+    z-index: 1;
 }
 .how-it-works-title {
     text-align: center;
@@ -395,6 +444,8 @@ ul {
     counter-increment: how-it-works;
 }
 .how-it-works-item::before {
+    position: relative;
+    z-index: 10;
     content: "";
     width: 60px;
     height: 60px;
